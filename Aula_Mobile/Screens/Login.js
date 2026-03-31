@@ -1,6 +1,6 @@
 import {View, TextInput, Button, Image, Text, StyleSheet} from 'react-native';
 
-export default function Login() {
+export default function Login({navigation}) {
     return(
         <View style={styles.container}>
             <Image source={require('../Sources/wega.jpg')} style={styles.ft} />
@@ -17,6 +17,13 @@ export default function Login() {
             />
             <Button
             title='Entrar'
+            color={'#5d2323ff'}
+            onPress={() => navigation.navigate('Home Screen')}
+            />
+            <Button
+            title='Contatos'
+            color={'#0084ffff'}
+            onPress={() => navigation.navigate('Contatos')}
             />
         </View>
     )
